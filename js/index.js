@@ -10,7 +10,6 @@ for (let i = 0; i < linhas.length; i++) {
     let kg = Number (linha.querySelector(".kg").textContent);
 
     let imc = calcularIMC(kg, altura);
-    console.log(imc);
     
     linha.querySelector(".imc").textContent = imc.toFixed(2);
 
