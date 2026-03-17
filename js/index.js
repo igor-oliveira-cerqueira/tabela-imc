@@ -11,10 +11,7 @@ for (let i = 0; i < linhas.length; i++) {
 
     let imc = calcularIMC(kg, altura);
     console.log(imc);
-    let filhos = linha.children
-    console.log(filhos)
-
-
+    
     linha.querySelector(".imc").textContent = imc.toFixed(2);
 
     classificar(imc, linha);
