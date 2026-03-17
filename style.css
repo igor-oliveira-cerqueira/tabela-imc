@@ -1,0 +1,48 @@
+body{
+    background: linear-gradient(135deg,#f5e9ff,#e7d4ff);
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(120, 70, 180, 0.2);
+    background: white;
+}
+
+th, td {
+    text-align: center;
+    padding: 14px;
+}
+
+th {
+    background: linear-gradient(135deg,#8a5cf6,#b084ff);
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+td {
+    border-bottom: 1px solid #eee;
+}
+
+tr:nth-child(even) {
+    background-color: #faf6ff;
+}
+
+tr:hover {
+    background-color: #efe6ff;
+    transform: scale(1.01);
+    transition: 0.2s ease;
+}
+
+.header-title{
+    text-align:center;
+    color:#7b3fe4;
+    font-size:28px;
+    margin-top:30px;
+    text-shadow:0 2px 8px rgba(123,63,228,0.2);
+}
