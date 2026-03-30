@@ -19,3 +19,13 @@ export function classificar(imc, linha) {
         classificacao.textContent = "Obesidade Grau III (Mórbida)"
     }
 };
+
+export function customizar(status) {
+    if (status.textContent == "Obesidade Grau III (Mórbida)") {
+        status.classList.add("perigo")
+    } else if (status.textContent == "Peso normal") {
+        status.classList.add("normal")
+    } else {
+        status.classList.add("outros")
+    }
+}
