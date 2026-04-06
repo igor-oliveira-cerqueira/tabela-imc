@@ -1,0 +1,15 @@
+.perigo {
+    color: rgb(182, 0, 0);
+    border: 2px solid rgb(182, 0, 0);
+}
+
+.normal {
+    color: green;
+    border: 2px solid green;
+}
+
+.outros {
+    color: rgb(201, 142, 34);
+    border: 2px solid rgb(201, 142, 34);
+}
+

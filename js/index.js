@@ -1,6 +1,8 @@
-import { calcularIMC, classificar, customizar } from "./opc.js"
+import { calcularIMC, classificar, customizar, pesquisar } from "./opc.js"
 
-let linhas = document.querySelectorAll("tbody tr");
+const linhas = document.querySelectorAll("tbody tr");
+const input = document.querySelector(".entrada");
+
 
 for (let i = 0; i < linhas.length; i++) {
     
@@ -19,5 +21,9 @@ for (let i = 0; i < linhas.length; i++) {
 linhas.forEach( function (linha){
     let celulas = linha.children;
     customizar(celulas[5]);
-})
+});
 
+
+input.addEventListener("input", function() {
+    pesquisar(input, linhas);
+});

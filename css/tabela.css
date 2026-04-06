@@ -1,0 +1,97 @@
+table {
+    width: 90dvw;
+    border-collapse: collapse;
+    table-layout: auto;
+    margin: 20px auto;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(120, 70, 180, 0.2);
+    background: white;
+    position: relative;
+}
+
+th, td {
+    text-align: center;
+    padding: 10px 5px;
+    word-wrap: break-word;
+    font-size: 14px;
+}
+
+th {
+    background: linear-gradient(135deg,#8a5cf6,#b084ff);
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+td {
+    border-bottom: 1px solid #eee;
+}
+
+tr:nth-child(even) {
+    background-color: #faf6ff;
+}
+
+tr:hover {
+    background-color: #efe6ff;
+    transform: scale(1.01);
+    transition: 0.2s ease;
+}
+
+.header-title{
+    text-align:center;
+    color:#7b3fe4;
+    font-size:28px;
+    margin-top: 5%;
+    text-shadow:0 2px 8px rgba(123,63,228,0.2);
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.visivel {
+    display: block;
+}
+
+.invisivel {
+    display: none;
+}
+
+@media (max-width: 500px) {
+
+    .header-title {
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    table {
+        margin-top: 10px;
+        width: 100%;
+        min-width: 0;
+    }
+
+    th, td {
+        padding: 8px 4px;
+        font-size: 13px;
+    }
+
+}
+
+@media (max-width: 400px) {
+    th, td {
+        font-size: 11px;
+        padding: 5px 2px;
+    }
+    
+    .header-title {
+        font-size: 18px;
+    }
+
+    input {
+        padding: 0.6em;
+    }
+}

@@ -1,5 +1,5 @@
 export function calcularIMC(kg, altura) {
-    let imc = kg / (altura*altura);
+    let imc = kg / (altura * altura);
     return imc
 };
 
@@ -7,13 +7,13 @@ export function classificar(imc, linha) {
     let classificacao = linha.querySelector(".classificacao")
     if (imc < 18.5) {
         classificacao.textContent = "Abaixo do peso"
-    } else if (imc > 18.5 && imc <= 24.9) {
+    } else if (imc >= 18.5 && imc <= 24.9) {
         classificacao.textContent = "Peso normal"
-    } else if (imc > 25 && imc <= 29.9) {
+    } else if (imc >= 25 && imc <= 29.9) {
         classificacao.textContent = "Sobrepeso"
-    } else if (imc > 30 && imc <= 34.9) {
+    } else if (imc >= 30 && imc <= 34.9) {
         classificacao.textContent = "Obesidade Grau I"
-    } else if (imc > 35 && imc <= 39.9) {
+    } else if (imc >= 35 && imc <= 39.9) {
         classificacao.textContent = "Obesidade Grau II"
     } else {
         classificacao.textContent = "Obesidade Grau III (Mórbida)"
@@ -28,4 +28,31 @@ export function customizar(status) {
     } else {
         status.classList.add("outros")
     }
+}
+
+function esconderLinha(linha, textoInput) {
+
+    let celulas = Array.from(linha.children);
+    let encontrado = false;
+
+    celulas.forEach(function (celula) {
+        let textoCelula = celula.textContent.toLowerCase();
+
+        if (textoCelula.includes(textoInput)) {
+        encontrado = true;
+    }
+
+    linha.style.display = encontrado ? "table-row" : "none";
+    });
+
+}
+
+export function pesquisar(input, linhas) {
+    
+    let textoInput = input.value.toLowerCase()
+
+    linhas.forEach(function (linha) {
+        esconderLinha(linha, textoInput);
+    });
+
 }
