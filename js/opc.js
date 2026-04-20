@@ -4,7 +4,8 @@ export function calcularIMC(kg, altura) {
 };
 
 export function classificar(imc, linha) {
-    let classificacao = linha.querySelector(".classificacao")
+    let celulas = Array.from(linha.children);
+    let classificacao = celulas[5];
     if (imc < 18.5) {
         classificacao.textContent = "Abaixo do peso"
     } else if (imc >= 18.5 && imc <= 24.9) {
@@ -28,31 +29,4 @@ export function customizar(status) {
     } else {
         status.classList.add("outros")
     }
-}
-
-function esconderLinha(linha, textoInput) {
-
-    let celulas = Array.from(linha.children);
-    let encontrado = false;
-
-    celulas.forEach(function (celula) {
-        let textoCelula = celula.textContent.toLowerCase();
-
-        if (textoCelula.includes(textoInput)) {
-        encontrado = true;
-    }
-
-    linha.style.display = encontrado ? "table-row" : "none";
-    });
-
-}
-
-export function pesquisar(input, linhas) {
-    
-    let textoInput = input.value.toLowerCase()
-
-    linhas.forEach(function (linha) {
-        esconderLinha(linha, textoInput);
-    });
-
 }
